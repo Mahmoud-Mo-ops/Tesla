@@ -1,0 +1,137 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial,sans-serif;
+}
+
+nav {
+	background-color:rgba(255,94,0,.8);
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	max-height: 60px;
+
+}
+
+nav .mainMenu{
+	display: flex;
+	list-style: none;
+}
+
+nav .mainMenu li a{
+	display: inline-block;
+	padding: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+
+nav .mainMenu li a:hover {
+	background:rgb(255,94,0);
+}
+
+
+nav .openMenu{
+	font-size: 2rem;
+	margin: 20px;
+	display: none;
+	cursor: pointer;
+}
+
+nav .mainMenu .closeMenu , .icons i {
+	font-size: 2rem;
+	display: none;
+	cursor: pointer;
+}
+
+.fa-facebook:hover {color: rgb(0,110,255);}
+.fa-twitter:hover {color: rgb(86,154,243);}
+.fa-instagram:hover {color: rgb(255,0,191);}
+.fa-github:hover {color: rgb(255,123,0);}
+
+nav .logo {
+	margin: 6px;
+	font-size: 25px;
+	cursor: pointer;
+	color: rgb(77, 28, 0);
+}
+
+@media (max-width: 800px){
+	nav .mainMenu{
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 10;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient( rgba(0, 0, 0,.9) 10%, transparent),
+                    url("images/tesla.jfif") center/cover no-repeat border-box, #ff1b68;
+		transition: top 1s ease;
+		display: none;
+	}
+
+	nav .mainMenu .closeMenu {
+		display: block;
+		position: absolute;
+		top:20px;
+		right: 20px
+	}
+
+	nav .openMenu{
+	display: block;
+
+}
+
+nav .mainMenu li a:hover {
+	background:none;
+	color: rgba(255,123,0);
+	font-size: 1.6rem;
+}
+.icons i {
+	display: inline-block;
+	padding: 12px;
+}
+
+
+}
+
+.container {
+	  background: url("images/tesla.jfif") 10% 20%/cover no-repeat border-box;
+	  height: 100vh;
+
+}
+
+
+/**	btn**/
+
+.btn button {
+	padding: 10px 35px;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	font-size: 1.5rem;
+	transition: .6 ease;
+     position: absolute;
+	top:30%;
+	right: 7%;
+}
+
+
+.btn button:hover {
+	cursor: pointer;
+	background-color: orange;
+	color: black;
+	box-shadow: 0 0 5px orange, 0 0 10px orange,0 0 15px orange;
+	font-weight: bold;
+	border: 1px solid orange;
+
+}
