@@ -1,0 +1,50 @@
+body{
+	 background-color:#66ffff;
+}
+section{
+	width: 500px;
+	height: 300px;
+	margin:100px auto;
+}
+
+div{
+	width:100%;
+	margin:15px auto;
+}
+label{
+	display: block;
+	padding: 20px;
+	font-size: 20px;
+}
+
+input{
+	width: 96%;
+	padding: 10px;
+	border:1px solid #797979;
+	margin-left:20px;
+	font-size: 20px;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+span{
+	display: block;
+	margin-left: 20px;
+	color: red;
+	font-style: italic;
+}
+
+.btn{
+   background-color:  #0000e6; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btn:hover{
+	background-color:  #3333ff;
+}
