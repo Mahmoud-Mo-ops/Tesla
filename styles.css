@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    color: #171a20;
+    font-family: 'M PLUS 1', sans-serif;
+    width: 100%;
+}
+.desktop{
+    display: none;
+}
+ @media (min-width:1200px) {
+    .desktop{
+        display: initial;
+    }
+ }
+
+header{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: 12px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  Width: 100%;
+  font-weight: 600px !important;
+}
+
+a.logo{
+    height: 12px;
+    width: 100px;
+    color: inherit;
+    background-color: transparent;
+}
+
+
+header a {
+    color: inherit;
+
+}
+header nav a{
+    text-decoration: none;
+    padding: 5px 10px;
+}
+header nav.ceneter{
+    text-align: center;
+}
+
+header nav.right{
+    text-align: right;
+}
+
+ /* SECTIONS  */
+ section{
+    height: 100vh;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+ }
+section .content{
+    width: 100%;
+    height: 100vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    text-align: center;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+
+ }
+ section .content h1{
+    font-size: 3rem;
+    font-weight: 500;
+ }
+ section a{
+    color:inherit;
+    border-bottom: 1px solid #000;
+    transition: all 2s linear;
+ }
+ section a:hover{
+    border-bottom: 1.5px solid #000;
+    cursor: pointer;
+ }
+ section .buttons a{
+    display: block;
+   background-color: #eee;
+   color: inherit;
+   text-decoration: none;
+   border-radius: 5px;
+   padding: 10px 15px;
+   font-size: 1rem;
+   font-weight: 500;
+ }
+ section .buttons a:first-child{
+    background-color: rgb(50, 49, 49);
+    color: #fff;
+
+ }
+
+ section .buttons{
+    display: grid;
+   row-gap: 20px;
+   margin: 0 40px;
+}
+ @media (min-width:600px) {
+    section .buttons{
+        margin: 0 auto;
+        grid-template-columns:1fr 1fr;
+        column-gap: 20px;
+        max-width: 550px;
+        width: 100%;
+    }
+ }
+ .btnShops{
+    width: 100%;
+    height: 100vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto min-content;
+ }
+ .btnShops h1{
+    color: inherit;
+    font-size: 2.8rem;
+    font-weight: 450;
+ }
+ .btnShop a{
+    display: block;
+    width: 270px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    opacity: .9;
+    font-weight: 500;
+    text-align: center;
+ }
+ /* slider */
+ aside{
+   position:fixed;
+   right: -300px;
+   width: 300px;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: left;
+   color: inherit;
+   background-color: #fff;
+   z-index:4;
+   overflow-y: auto;
+   padding: 80px 30px;
+   transition: all .6s linear;
+ }
+
+ aside .close{
+   background-color: transparent;
+   border: none;
+   font-size:1.5rem;
+   font-weight: 100;
+   font-family: sans-serif;
+   color:inherit;
+   opacity: .8;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   padding:10px;
+   cursor: pointer;
+ }
+ aside a{
+   display: block;
+   color: inherit;
+   opacity: .9;
+   font-size: 1rem;
+   text-decoration: none;
+   padding: 12px 0;
+   font-weight: 500;
+ }
+/* backdrop */
+.backdrop{
+   position: fixed;
+   display: none;
+   top: 0;
+   left: 0;
+   z-index:3;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.3);
+   cursor: pointer;
+}
