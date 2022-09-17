@@ -56,48 +56,17 @@ header a {
 header nav a{
     text-decoration: none;
     padding: 5px 10px;
-
+   transition: all .2s ease;
 }
 
+header nav a:hover{
+   background-color: #eee;
+}
 header nav.ceneter{
     text-align: center;
     
 }
-.hover{
-   position: absolute;
-   top: -2px;
-   left: 20.6rem;
-   width: 5.9rem;
-   z-index: -1;
-   height: 2rem;
-   border-radius: 0.58rem;
-   transition: all .5s ease;
-   /* display: none; */
-   background-color: #eee;
-}
-/* .ceneter a:hover ~ .hover{
-  display: block;
-}
-.ceneter a:hover:nth-child(1):hover ~ .hover{
-   left: 20.6rem;
- }
-.ceneter a:hover:nth-child(2):hover ~ .hover{
-   left: 26.2rem;
- }
- .ceneter:hover:nth-child(3):hover ~.hover{
-   left: 31.8rem;
-}
- .ceneter:hover:nth-child(4):hover ~ .hover{
-   left: 37.2rem;
- }
- .ceneter:hover:nth-child(5):hover ~ .hover{
-   left: 43.4rem
- }
- .ceneter:hover:nth-child(6):hover ~ .hover{
-     left: 50.2rem;
-    width: 6.6rem;
- }
-  */
+
 
 header nav.right{
     text-align: right;
@@ -112,18 +81,20 @@ header nav.right{
    scroll-snap-align:start;
    scroll-snap-stop: always;
     height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center; /*Center the image*/
-    /* background-position: left 45% bottom 20%; */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background:center/cover no-repeat border-box;
  }
- @media (max-width:488px) {
+
+ @media (max-width:480px) {
    section{
-      zoom: 70%;
-   }
+      zoom: 80%;
+    background-position: left 45% bottom 20%;
+      
+  }
  }
 
 section .content{
+   position: absolute;
+   z-index: 5;
     width: 100%;
     height: 100vh;
     padding-top: 15vh;
@@ -141,10 +112,13 @@ section .content{
  section a{
     color:inherit;
     border-bottom: 1px solid #000;
-    transition: all 2s linear;
+    transition: all 1s linear;
     cursor: pointer;
- }
+   }
+ section a:hover{
+   border-bottom: 2px solid #000;
 
+ }
  
  section .buttons a{
     display: block;
