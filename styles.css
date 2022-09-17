@@ -4,6 +4,12 @@
     box-sizing: border-box;
     
 }
+
+html{
+   scroll-behavior: smooth;
+   scroll-snap-type: y mandatory;
+}
+
 body{
     color: #171a20;
     font-family: 'M PLUS 1', sans-serif;
@@ -15,25 +21,31 @@ body{
  @media (min-width:1200px) {
     .desktop{
         display: initial;
+        position: relative;
     }
+   
+   
  }
 
 header{
   display: grid;
   grid-template-columns: auto 1fr auto;
-  padding: 12px 20px;
+  padding: 18px 15px;
   position: fixed;
   top: 0;
   z-index: 2;
   Width: 100%;
-  font-weight: 600px !important;
+  font-size: 1rem;
+  font-weight: 410;
 }
 
+
 a.logo{
-    height: 12px;
-    width: 100px;
+    height: 18px;
+    width: 110px;
     color: inherit;
     background-color: transparent;
+    font-weight: bold;
 }
 
 
@@ -44,21 +56,73 @@ header a {
 header nav a{
     text-decoration: none;
     padding: 5px 10px;
+
 }
+
 header nav.ceneter{
     text-align: center;
+    
 }
+.hover{
+   position: absolute;
+   top: -2px;
+   left: 20.6rem;
+   width: 5.9rem;
+   z-index: -1;
+   height: 2rem;
+   border-radius: 0.58rem;
+   transition: all .5s ease;
+   /* display: none; */
+   background-color: #eee;
+}
+/* .ceneter a:hover ~ .hover{
+  display: block;
+}
+.ceneter a:hover:nth-child(1):hover ~ .hover{
+   left: 20.6rem;
+ }
+.ceneter a:hover:nth-child(2):hover ~ .hover{
+   left: 26.2rem;
+ }
+ .ceneter:hover:nth-child(3):hover ~.hover{
+   left: 31.8rem;
+}
+ .ceneter:hover:nth-child(4):hover ~ .hover{
+   left: 37.2rem;
+ }
+ .ceneter:hover:nth-child(5):hover ~ .hover{
+   left: 43.4rem
+ }
+ .ceneter:hover:nth-child(6):hover ~ .hover{
+     left: 50.2rem;
+    width: 6.6rem;
+ }
+  */
 
 header nav.right{
     text-align: right;
+   
 }
 
+
+   
  /* SECTIONS  */
+ 
  section{
+   scroll-snap-align:start;
+   scroll-snap-stop: always;
     height: 100vh;
-    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    background-position: center; /*Center the image*/
+    /* background-position: left 45% bottom 20%; */
     background-size: cover; /* Resize the background image to cover the entire container */
  }
+ @media (max-width:488px) {
+   section{
+      zoom: 70%;
+   }
+ }
+
 section .content{
     width: 100%;
     height: 100vh;
@@ -69,6 +133,7 @@ section .content{
     grid-template-rows: min-content auto min-content;
 
  }
+
  section .content h1{
     font-size: 3rem;
     font-weight: 500;
@@ -77,17 +142,16 @@ section .content{
     color:inherit;
     border-bottom: 1px solid #000;
     transition: all 2s linear;
- }
- section a:hover{
-    border-bottom: 1.5px solid #000;
     cursor: pointer;
  }
+
+ 
  section .buttons a{
     display: block;
    background-color: #eee;
    color: inherit;
    text-decoration: none;
-   border-radius: 5px;
+   border:none;
    padding: 10px 15px;
    font-size: 1rem;
    font-weight: 500;
