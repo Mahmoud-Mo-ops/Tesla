@@ -103,10 +103,25 @@ section .content{
 
  }
 
+ /* section.active .content{
+   opacity: 1;
+ } */
+
+
  section .content h1{
     font-size: 3rem;
     font-weight: 500;
- }
+    position: relative;
+    top: -100px;
+    opacity:0;
+    transition: all 2s ease;
+}
+section .content p{
+   position: relative;
+   top: -100px;
+   opacity:0;
+   transition: all 2s ease;
+}
  section a{
     color:inherit;
     border-bottom: 1px solid #000;
@@ -118,6 +133,17 @@ section .content{
 
  }
  
+ section .buttons{
+   position: relative;
+   bottom: 100px;
+   transition: all 2s ease;
+ }
+ .buttons.load{
+   position: relative;
+   top: 0;
+   right: 0;
+   opacity: 1;
+ }
  section .buttons a{
     display: block;
    background-color: #eee;
@@ -128,10 +154,17 @@ section .content{
    font-size: 1rem;
    font-weight: 500;
  }
+
  section .buttons a:first-child{
     background-color: rgb(50, 49, 49);
     color: #fff;
+}
 
+ .buttons.load{
+   position: relative;
+   top: 0;
+   right: 0;
+   opacity: 1;
  }
 
  section .buttons{
