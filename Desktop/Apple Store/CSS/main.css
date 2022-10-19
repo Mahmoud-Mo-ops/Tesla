@@ -61,9 +61,7 @@ header .container{
     justify-content: space-between;
     align-items: center;
 }
-/* header .container .menu{
-    position: relative;
-} */
+
 @media (min-width:767px) {
     header .container .menu{
       display: none;
@@ -82,6 +80,14 @@ header .container .menu .all-items{
     flex-direction: column;
     padding-top: 50px;
     transition: var(--main-transition);
+}
+@media (min-width:767px) {
+    header .container .menu .all-items{
+        display: flex;
+        flex-direction: row;
+        top: 0;
+    
+    }
 }
 header .container .menu .all-items .search-phone{
     position: relative;
@@ -154,7 +160,7 @@ header .container .menu .icons{
  
 header .container .menu .icons span{
     display: block;
-    height: 1.3px;
+    height: 1.2px;
     width: 100%;
     background-color:var(--main-color);
     margin-bottom: 5px;
